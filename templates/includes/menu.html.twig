@@ -1,0 +1,16 @@
+<div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+            <a class="toc item"><i class="sidebar icon"></i></a>
+            <a class="item">{{ 'menu.homepage' | trans }}</a>
+            <div class="right item">
+                {% if app.user %}
+                    <a class="ui inverted button" href="{{ path('skeletton_security_logout') }}">{{ 'menu.logout'|trans }}</a>
+                {% else %}
+                    <a class="ui inverted button" href="{{ path('skeletton_security_login') }}">{{ 'menu.login'|trans }}</a>
+                    <a class="ui inverted button" href="{{ path('skeletton_user_registration') }}">{{ 'menu.signup'|trans }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

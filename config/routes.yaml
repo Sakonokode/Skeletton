@@ -1,0 +1,5 @@
+register:
+  path:       /{_locale}/register
+  controller: Skeletton\Controller\RegistrationController::register
+  requirements:
+    _locale: en|fr|de

@@ -1,0 +1,17 @@
+users:
+  user-1:
+    email: "user-1@gmail.com"
+    password: m3p
+    roles: "ROLE_USER"
+  user-2:
+    email: "user-2@gmail.com"
+    password: m3p
+    roles: "ROLE_USER"
+  user-3:
+    email: "user-3@gmail.com"
+    password: m3p
+    roles: "ROLE_USER"
+  admin:
+    email: "admin@gmail.com"
+    password: m3p
+    roles: "ROLE_ADMIN"

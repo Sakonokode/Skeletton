@@ -1,0 +1,30 @@
+security:
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+    encoders:
+        Skeletton\Entity\User: bcrypt
+    providers:
+        user_provider:
+            id: Skeletton\Security\Provider\UserProvider
+
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            provider: user_provider
+            form_login:
+                login_path: skeletton_security_login
+                check_path: skeletton_security_login
+            logout:
+                path: skeletton_security_logout
+                target: skeletton_homepage
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, roles: ROLE_ADMIN }

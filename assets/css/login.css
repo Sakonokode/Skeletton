@@ -1,0 +1,18 @@
+body {
+    background-color: #dadada;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+}
+
+body > .ui.grid {
+    height: 100%;
+}
+
+.column {
+    max-width: 450px;
+    margin: 0;
+    position: absolute !important;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
